@@ -1,11 +1,11 @@
-.animal {
+.customer {
     margin: 10px;
-    background-color: beige;
-    border: 2px solid lightcoral;
+    background-color: lightblue;
+    border: 2px solid slategray;
     padding: 6px;
 }
 
-.animals {
+.customers {
     border: 2px solid grey;
     background-color: whitesmoke;
     margin: 10px;

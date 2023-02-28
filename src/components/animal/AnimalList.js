@@ -15,15 +15,16 @@ export const AnimalList = () => {
 
   return (
     <section className="animals">
+      <h2>Animals</h2>
       {
         animals.map(animal => {
           return (
             <div key={animal.id} className="animal" id={`animal--${animal.id}`}>
               <div className="animal__name">
-                Name: { animal.name }
+                Name: {animal.name}
               </div>
               <div className="animal__breed">
-                Breed: { animal.breed }
+                Breed: {animal.breed}
               </div>
             </div>
           )
