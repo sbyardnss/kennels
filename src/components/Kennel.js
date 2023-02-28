@@ -1,26 +1,26 @@
-import React from "react"
-import { LocationList } from "./location/LocationList.js"
+import { Route, Routes } from "react-router-dom"
+import { Authorized } from "../Authorized"
+import { ApplicationViews } from "./ApplicationViews"
+import { NavBar } from "./nav/NavBar"
+// import { Login } from "./auth/Login"
+// import { Register } from "./auth/Register"
 import "./Kennel.css"
-import { AnimalProvider } from "./animal/AnimalProvider.js"
-import { AnimalList } from "./animal/AnimalList.js"
-import { LocationProvider } from "./location/LocationProvider.js"
-import { CustomerProvider } from "./Customer/CustomerProvider.js"
-import { CustomerList } from "./Customer/CustomerList.js"
 
-export const Kennel = () => (
-    <>
-        <h2>Nashville Kennels</h2>
 
-        <AnimalProvider>
-            <AnimalList />
-        </AnimalProvider>
+export const Kennel = () => {
+	return <Routes>
+		{/* <Route path="/login" element={<Login />} />
+		<Route path="/register" element={<Register />} /> */}
 
-        <LocationProvider>
-            <LocationList />
-        </LocationProvider>
+		<Route path="*" element={
+			<Authorized>
+				<>
+					<NavBar />
+					<ApplicationViews />
+				</>
+			</Authorized>
 
-        <CustomerProvider>
-            <CustomerList />
-        </CustomerProvider>
-    </>
-)
+		} />
+	</Routes>
+}
+

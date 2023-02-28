@@ -16,13 +16,28 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 */
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { Kennel } from "./components/Kennel"
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import { Kennel } from "./components/Kennel"
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+//     <Kennel />
+//   </React.StrictMode>,
+// );
+
+import { Kennel } from "./components/Kennel"
+import { createRoot } from "react-dom/client"
+import "./index.css"
+import { BrowserRouter } from "react-router-dom"
+
+const container = document.getElementById("root")
+const root = createRoot(container)
 root.render(
-  <React.StrictMode>
-    <Kennel />
-  </React.StrictMode>,
-);
+    <BrowserRouter>
+        <Kennel />
+    </BrowserRouter>
+)
+
